@@ -1,131 +1,80 @@
-📱 Fakhama Mobile Application – Frontend & Backend
-This repository contains the complete mobile application project, including the backend API, the frontend application, the project documentation, and a demo video.
+# Fakhama Mobile Application – Frontend & Backend
 
-The project is designed to manage luxury costume rentals with a complete user flow (browsing, favorites, cart, ID verification) and a comprehensive admin dashboard.
+This repository contains the **complete mobile application project**, including the **backend API**, the **frontend application**, the **project documentation**, and a **demo video**.
 
-📁 Project Structure
-Plaintext
+---
 
+## 📁 Project Structure
+
+```
 FakhamaFrontBack/
 ├── BackendMobileVS/        # Backend (Laravel API)
-├── FakhamaFrontEnd/        # Frontend application (Expo / React Native)
-├── docs/                   # Project documentation
+├── FakhamaFrontEnd/        # Frontend application
+├── docs/                  # Project documentation
 │   └── Cahier des Charges Mobile.pdf
-├── videos/                 # Application demo video
+├── videos/                # Application demo video
 │   └── vidapplication.mp4
-⚙️ Backend
-The backend serves as the REST API provider for the mobile application.
+```
 
-📂 Location: BackendMobileVS/
+---
 
-🛠 Technology: Laravel
+## ⚙️ Backend
 
-🏗 Architecture: REST API
+- **Technology:** Laravel
+- **Architecture:** REST API
+- **Authentication:** Laravel Sanctum
+- **Main Features:**
+  - User authentication
+  - Product management
+  - Reservations
+  - Favorites
+  - Admin access control (middleware)
 
-🔐 Authentication: Laravel Sanctum
+📂 Backend location: `BackendMobileVS/`
 
-✨ Main Features:
+---
 
-User Authentication (Login/Register)
+## 🎨 Frontend
 
-Product Management (CRUD)
+- **Type:** Mobile / Frontend application
+- **Role:** Consumes the Laravel REST API
+- **Purpose:** User interaction with backend services
 
-Reservation System
+📂 Frontend location: `FakhamaFrontEnd/`
 
-Favorites/Wishlist Management
+---
 
-Admin Access Control (Middleware)
+## 📄 Documentation
 
-🎨 Frontend
-The frontend is a cross-platform mobile application built to consume the Laravel API.
+The full project specification (Cahier des Charges) is available in PDF format:
 
-📂 Location: FakhamaFrontEnd/
+📘 **Cahier des Charges Mobile:**  
+👉 [View the documentation](docs/Cahier%20des%20Charges%20Mobile.pdf)
 
-📱 Framework: React Native (Expo) with Expo Router
+---
 
-💻 Language: TypeScript / TSX
+## 🎥 Application Demo Video
 
-🛠 Key Stack & Libraries
-HTTP Client: Axios (with auth interceptor)
+⚠️ GitHub does not preview video files directly.
 
-State Management: React Context (CartContext)
+📥 **Download and watch the demo video:**  
+👉 [Application Demo Video](videos/vidapplication.mp4)
 
-Storage: AsyncStorage (Cart persistence)
+---
 
-Routing: File-based routing (Expo Router)
+## 🚀 How to Run the Project (Quick Guide)
 
-Key Libs: vector-icons, expo-image-picker, datetimepicker, react-navigation
-
-📱 Frontend Project Structure
-app/ — Pages (Expo Router routes)
-
-app/client/ — User pages (Home, Catalog, Product, Cart, Favorites, Profile)
-
-app/admin/ — Admin pages (Add Product, Reservations, Manage Products)
-
-app/context/ — Global state management (CartContext.tsx)
-
-src/services/ — Axios instance configuration (api.js)
-
-assets/ — Images & resources
-
-✨ Main Frontend Features
-🛍️ Product catalog with category filters
-
-👕 Product details with date/size selection
-
-🛒 Shopping cart with local persistence
-
-🆔 CIN (ID document) scanning/upload for orders
-
-❤️ Favorites system (Wishlist)
-
-👤 User profile management
-
-🛠️ Admin Dashboard: Full product & reservation management
-
-🔗 API Endpoints Integration
-The frontend communicates with the backend via the following endpoints:
-
-Auth: POST /auth/login, POST /auth/register
-
-Products: GET /products, POST /products, PUT /products/{id}
-
-Favorites: POST /favorites/toggle, GET /favorites
-
-Reservations: POST /reservations, GET /reservations, PUT /reservations/{id}/return
-
-Profile: POST /api/profile/update, GET /api/my-reservations
-
-📄 Documentation
-The full project specification (Cahier des Charges) is available in PDF format.
-
-📘 Cahier des Charges Mobile: 👉 View the documentation
-
-🎥 Application Demo Video
-⚠️ Note: GitHub does not preview video files directly.
-
-📥 Download and watch the demo video here: 👉 Application Demo Video
-
-🚀 How to Run the Project (Quick Guide)
-1️⃣ Backend Setup (Laravel)
-Bash
-
+### Backend Setup
+```bash
 cd BackendMobileVS
-
-# Install dependencies
 composer install
-
-# Environment setup
 cp .env.example .env
 php artisan key:generate
-
-# Database migration
 php artisan migrate
-
-# Start the server
 php artisan serve
-2️⃣ Frontend Setup (Expo/React Native)
+```
+
+### Frontend Setup
 Install Dependencies:
 
 Bash
@@ -157,12 +106,21 @@ Bash
 npx expo start --android
 # or
 npx expo start --ios
-👤 Author
-GitHub: Mehdi77-dev
 
-📌 Notes
-This repository is intended for academic and project demonstration purposes.
+---
 
-Large media files are provided as downloadable resources.
+## 👤 Author
 
-For a full overview, please consult the documentation folder and the demo video.
+- **GitHub:** https://github.com/Mehdi77-dev
+
+---
+
+## 📌 Notes
+
+- This repository is intended for **academic and project demonstration purposes**
+- Large media files are provided as downloadable resources
+- For a full overview, please consult the documentation and demo video
+
+---
+
+✅ **Project Status:** Completed
