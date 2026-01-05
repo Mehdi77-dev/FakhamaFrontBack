@@ -74,7 +74,7 @@ php artisan migrate
 php artisan serve
 ```
 
-### Frontend Setup
+## Frontend Setup
 Install Dependencies:
 
 Bash
@@ -87,7 +87,7 @@ Note: Replace the IP address with your machine's local Network IP.
 
 PowerShell
 
-# For Windows (PowerShell) - Example IP
+##  For Windows (PowerShell) - Example IP
 $env:REACT_NATIVE_PACKAGER_HOSTNAME="192.168.1.103"; npx expo start --lan -c
 Flags used:
 
